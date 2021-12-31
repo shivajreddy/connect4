@@ -1,0 +1,131 @@
+/* game board table */
+@import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    /* background-color: #E5E5E5; */
+    background-color: #e9ecef;
+    margin: 0;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* width: 90%; */
+    padding:0px 30px;
+    /* outline: solid red 5px; */
+    /* border: solid red 2px; */
+}
+#title {
+    margin: 0px 0px 60px 0px;
+    font-family: 'Moo Lah Lah', cursive;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+#title1 {
+    color: #F72585;
+    text-shadow: 0 0 3px #F72585, 0 0 10px #12b2e2;
+}
+#title2 {
+    color: #4CC9F0;
+    text-shadow: 0 0 3px #4CC9F0, 0 0 10px #f962a6;
+}
+
+@media only screen and (min-width: 400px) {
+    #game {
+        /* background-color: rgb(0, 179, 249); */
+        /* height: 200px; */
+    }
+    #board td{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #game {
+        /* background-color: rgb(166, 57, 239); */
+    }
+    #board td {
+        width: 50px;
+        height: 50px;
+    }
+    #title {
+        font-size: 3rem;
+    }
+}
+
+#board{
+
+    outline: 3px solid rgb(150, 150, 150);
+    outline-offset: 10px;
+
+}
+.p1{
+    background-color: #F72585;
+}
+.p2{
+    background-color: #4CC9F0;
+}
+.game-piece {
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+    /* width: 50px;
+    height: 50px; */
+    border-radius: 50%;
+}
+
+#board td {
+  /* width: 50px; */
+  /* height: 50px; */
+  /* margin: 20px; */
+  border: solid 2px rgb(50, 50, 50);
+  border-radius: 50%;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+.reset {
+    margin-top: 20px;
+}
+
+/* Game Status Styles */
+.game-status{
+    margin-top: 20px;
+}
+h2{
+    margin: 0;
+}
+.scores {
+    display: flex;
+}
+#p2-score{
+    padding-left: 30px;
+}
